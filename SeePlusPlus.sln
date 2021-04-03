@@ -13,6 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{6D7081
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestScripts", "TestScripts", "{51E70EA2-FE1F-46F0-8CC2-9CF13953493E}"
+	ProjectSection(SolutionItems) = preProject
+		src\TestScripts\consoleTest.ps1 = src\TestScripts\consoleTest.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
