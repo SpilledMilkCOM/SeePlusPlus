@@ -3,10 +3,10 @@
 #include "IMapper.h"
 
 namespace MapperLib {
-	class Shout //: public IMapper
+	class Shout : public IMapper
 	{
 	public:
-		void Map(const char* source, char** mapped);
+		virtual void Map(const char* source, char** mapped);
 		const char* ShoutOut();
 	};
 }
