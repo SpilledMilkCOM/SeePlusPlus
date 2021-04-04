@@ -55,4 +55,19 @@ int main(int argc, char* argv[])
 
 		delete(mapped);
 	}
+
+	Shout2* mapper2 = new Shout2();
+
+	std::cout << mapper2->ShoutOut() << "\n";
+
+	for (int index = 1; index < argc; index++)
+	{
+		char* mapped = NULL;
+
+		mapper2->Map(argv[index], &mapped);
+
+		std::cout << "argv SHOUT=" << mapped << "\n";
+
+		delete(mapped);
+	}
 }
