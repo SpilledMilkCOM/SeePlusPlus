@@ -1,31 +1,33 @@
 #include "pch.h"
 
-#include "IMapper.h"
+#include "Shout.h"
 
 using namespace MapperLib;
 
+/// <summary>
+/// Note that these methods are defined statically.
+/// The header file defines them as in the "Shout" class
+/// </summary>
+
 namespace MapperLib {
-	class Shout //: public IMapper
+
+	int _member = 0;
+
+	const char* Shout::ShoutOut() {
+		return "SHOUT OUT from STATIC MapperLib!!!!";
+	}
+
+	void Shout::Map(const char* source, char** mapped)
 	{
-	public:
-		Shout() {}
+		size_t sourceLen = strlen(source) + 1;		// Include terminator
 
-		const char* ShoutOut() {
-			return "SHOUT OUT!!!!";
-		}
+		*mapped = new char[sourceLen];
 
-		virtual void Map(const char* source, char** mapped)
+		strcpy_s(*mapped, sourceLen, source);
+
+		for (size_t index = 0; index < sourceLen; index++)
 		{
-			size_t sourceLen = strlen(source);
-
-			*mapped = new char[sourceLen];
-
-			strcpy_s(*mapped, sourceLen, source);
-
-			for (size_t index = 0; index < sourceLen; index++)
-			{
-				(*mapped)[index] = toupper((*mapped)[index]);
-			}
+			(*mapped)[index] = toupper((*mapped)[index]);
 		}
-	};
+	}
 }

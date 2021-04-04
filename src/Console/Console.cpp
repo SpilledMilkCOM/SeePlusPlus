@@ -2,6 +2,7 @@
 
 #include "MapperLib.h"
 #include "Shout.h"
+#include "Shout2.h"
 
 using namespace MapperLib;
 
