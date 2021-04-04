@@ -4,7 +4,7 @@
 
 class Shout2 {
 public:
-	Shout2() {}
+	Shout2() {}			// Seems like this should fail since it's defined twice.
 
 	const char* ShoutOut() {
 		return "SHOUT TWO OUT!!!!";

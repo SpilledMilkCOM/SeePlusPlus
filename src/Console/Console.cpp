@@ -11,6 +11,10 @@ class Shout3
 public:
 	Shout3() {}
 
+	const char* ShoutOut() {
+		return "SHOUT THREE OUT!!!!";
+	}
+
 	void Map(const char* source, char** mapped)
 	{
 		size_t sourceLen = strlen(source) + 1;		// Add in terminator
@@ -56,15 +60,30 @@ int main(int argc, char* argv[])
 		delete(mapped);
 	}
 
-	Shout2* mapper2 = new Shout2();
+	//Shout2* mapper2 = new Shout2();
 
-	std::cout << mapper2->ShoutOut() << "\n";
+	//std::cout << mapper2->ShoutOut() << "\n";
+
+	//for (int index = 1; index < argc; index++)
+	//{
+	//	char* mapped = NULL;
+
+	//	mapper2->Map(argv[index], &mapped);
+
+	//	std::cout << "argv SHOUT=" << mapped << "\n";
+
+	//	delete(mapped);
+	//}
+
+	Shout3* mapper3 = new Shout3();
+
+	std::cout << mapper3->ShoutOut() << "\n";
 
 	for (int index = 1; index < argc; index++)
 	{
 		char* mapped = NULL;
 
-		mapper2->Map(argv[index], &mapped);
+		mapper3->Map(argv[index], &mapped);
 
 		std::cout << "argv SHOUT=" << mapped << "\n";
 

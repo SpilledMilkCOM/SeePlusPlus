@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="Shout2.cpp" />
+    <ClCompile Include="Shout4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MapperLib\MapperLib.vcxproj">
